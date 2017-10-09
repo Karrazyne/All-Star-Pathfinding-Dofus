@@ -4,7 +4,7 @@ using KarraPath.D2PReader.IO;
 
 namespace KarraPath.D2PReader.D2p
 {
-    public class Map : IMap
+    public class Map
     {
         public Map()
         {
