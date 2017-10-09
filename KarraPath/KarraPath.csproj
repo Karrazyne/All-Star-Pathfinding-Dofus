@@ -20,6 +20,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -30,10 +31,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Cookie.API, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\Desktop\Cookie\Cookie\bin\Debug\Cookie.API.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -46,6 +43,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="D2PReader\D2p\Cell.cs" />
+    <Compile Include="D2PReader\D2p\CellData.cs" />
+    <Compile Include="D2PReader\D2p\ColorMultiplicator.cs" />
+    <Compile Include="D2PReader\D2p\CustomHex.cs" />
+    <Compile Include="D2PReader\D2p\D2PFileDlm.cs" />
+    <Compile Include="D2PReader\D2p\D2PFileManager.cs" />
+    <Compile Include="D2PReader\D2p\Elements\BasicElement.cs" />
+    <Compile Include="D2PReader\D2p\Elements\GraphicalElement.cs" />
+    <Compile Include="D2PReader\D2p\Elements\SoundElement.cs" />
+    <Compile Include="D2PReader\D2p\Fixture.cs" />
+    <Compile Include="D2PReader\D2p\ImageManager.cs" />
+    <Compile Include="D2PReader\D2p\IMap.cs" />
+    <Compile Include="D2PReader\D2p\Layer.cs" />
+    <Compile Include="D2PReader\D2p\Map.cs" />
+    <Compile Include="D2PReader\D2p\MapsManager.cs" />
+    <Compile Include="D2PReader\IO\BigEndianReader.cs" />
+    <Compile Include="D2PReader\IO\BigEndianWriter.cs" />
+    <Compile Include="D2PReader\IO\BooleanByteWrapper.cs" />
+    <Compile Include="D2PReader\IO\CustomDataConst.cs" />
+    <Compile Include="D2PReader\IO\DirectoryInformation.cs" />
+    <Compile Include="D2PReader\IO\FastBigEndianReader.cs" />
+    <Compile Include="D2PReader\IO\IDataReader.cs" />
+    <Compile Include="D2PReader\IO\IDataWriter.cs" />
+    <Compile Include="D2PReader\IO\LittleEndianReader.cs" />
+    <Compile Include="D2PReader\IO\LittleEndianWriter.cs" />
+    <Compile Include="D2PReader\IO\Types\Binary64.cs" />
+    <Compile Include="D2PReader\IO\Types\CustomInt64.cs" />
+    <Compile Include="D2PReader\IO\Types\CustomUInt64.cs" />
+    <Compile Include="ForEachExtensions.cs" />
     <Compile Include="MainUc.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -62,11 +88,6 @@
     <EmbeddedResource Include="MainUc.resx">
       <DependentUpon>MainUc.cs</DependentUpon>
     </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Cookie.API.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -5,9 +5,8 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Windows.Forms;
-using Cookie.API.Gamedata.D2p;
-using Cookie.API.Utils.Extensions;
 using KarraPath.Pathfinder;
+using MapsManager = KarraPath.D2PReader.D2p.MapsManager;
 using Point = System.Drawing.Point;
 
 namespace KarraPath
@@ -377,22 +376,6 @@ namespace KarraPath
                 yold = ynew;
             }
             return inside;
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            var tmp = MapsManager.FromId(MapId);
-            tmp.Cells.ForEachWithIndex((cellData, index) =>
-            {
-                var cell = GetCell(index);
-                cell.Text = cell.Id.ToString();
-                if (cellData.Los)
-                    cell.State = CellState.NonWalkable;
-                if (cellData.Mov)
-                    cell.State = CellState.Walkable;
-            });
-            Invalidate();
-
         }
     }
 

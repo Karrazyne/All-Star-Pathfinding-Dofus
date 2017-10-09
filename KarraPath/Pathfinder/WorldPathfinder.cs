@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
-using Cookie.API.Gamedata.D2p;
+using Map = KarraPath.D2PReader.D2p.Map;
 
 namespace KarraPath.Pathfinder
 {
