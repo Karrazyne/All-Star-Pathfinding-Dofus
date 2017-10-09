@@ -24,6 +24,8 @@ namespace KarraPath.Pathfinder
 
         private void InitGrid()
         {
+            // Merci au code de alex pour la grille ! 
+            // https://github.com/alexandre10044/Pathfinder-2.0
             int loc2, loc3;
             int loc5;
             var loc1 = loc2 = loc3 = loc5 = 0;
